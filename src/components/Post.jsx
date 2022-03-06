@@ -8,7 +8,7 @@ const Post = ({ post }) => {
 
   return (
     <div className={styles.postWrapper}>
-      <Link to={""} className={`${styles.title} App-link`}>
+      <Link to={"/posts/" + id} className={`${styles.title} App-link`}>
         {title}
       </Link>
       <p className={styles.content}>{body}</p>

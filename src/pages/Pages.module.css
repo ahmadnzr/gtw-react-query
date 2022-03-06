@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contentHeader {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contentHeader > h2 {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.contentHeader > span {
+  opacity: 0.5;
+}
+
+.contentBody {
+  text-align: left;
+  font-size: 18px;
+}
+
+.commentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.commentWrapper > h5 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  opacity: 0.6;
+}
+
+.commentWrapper > span {
+  font-size: 12px;
+}
+.commentWrapper > p {
+  text-align: left;
+}
