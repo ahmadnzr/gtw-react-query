@@ -1,20 +1,23 @@
 import { useQueryClient } from "react-query";
 import { usePosts } from "../queries/posts";
+import Post from "./Post";
+
+import style from "./Component.module.css";
 
 const Posts = () => {
   const queryClient = useQueryClient();
   const { status, data, error } = usePosts();
 
   return (
-    <div>
-      <h1># Posts</h1>
-      <div>
+    <div className={style.wrapper}>
+      <h1 className={style.pageTitle}># Post</h1>
+      <div className={style.listPosts}>
         {status === "loading" ? (
           <p>Loading....</p>
         ) : status === "error" ? (
           <p>Error: {error.message}</p>
         ) : (
-          data.map((post) => <p key={post.id}>{post.title}</p>)
+          data.map((post) => <Post key={post.id} post={post} />)
         )}
       </div>
     </div>
