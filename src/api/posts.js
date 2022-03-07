@@ -10,3 +10,8 @@ export const getPost = async ({ postId }) => {
   const response = await axios.get(BASE_URL + "/posts/" + postId);
   return response.data;
 };
+
+export const getPostsByUserId = async ({ userId }) => {
+  const response = await axios(BASE_URL + "/posts?userId=" + userId);
+  return response.data;
+};

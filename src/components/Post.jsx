@@ -14,7 +14,7 @@ const Post = ({ post }) => {
       <p className={styles.content}>{body}</p>
       <span>
         posted by:{" "}
-        <Link to={""} className="App-link">
+        <Link to={"/posts/user/" + userId} className="App-link">
           {!!data ? data.name : ""}
         </Link>
       </span>

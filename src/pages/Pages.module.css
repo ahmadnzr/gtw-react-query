@@ -58,3 +58,59 @@
 .commentWrapper > p {
   text-align: left;
 }
+
+/* user detail page */
+
+.uWrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uContent {
+  width: 80%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.uLeft,
+.uRight {
+  margin: 0 5px;
+}
+
+.uLeft {
+  flex: 2;
+}
+
+.uRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uRight > * {
+  margin: 5px 0;
+}
+
+.uAvatar {
+  width: 100px;
+  border-radius: 50%;
+}
+.uContact {
+  width: 100%;
+}
+.uContact > span {
+  margin: 0 5px;
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.5;
+  text-transform: lowercase;
+}
+
+.uTotal {
+  font-size: 30px;
+  text-transform: capitalize;
+  opacity: 0.5;
+}
