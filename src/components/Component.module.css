@@ -21,6 +21,12 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
+@media (max-width: 801px) {
+  .listPosts {
+    width: 90%;
+  }
+}
+
 /* single post */
 .postWrapper {
   margin: 10px;

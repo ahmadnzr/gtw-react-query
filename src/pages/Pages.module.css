@@ -90,6 +90,12 @@
   align-items: center;
 }
 
+@media (max-width: 801px) {
+  .uContent {
+    flex-direction: column;
+  }
+}
+
 .uRight > * {
   margin: 5px 0;
 }
