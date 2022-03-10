@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery, useQueryClient } from "react-query";
 import { getPost, getPosts, getPostsByUserId } from "../api/posts";
 
 export const usePosts = () => {
@@ -6,7 +6,23 @@ export const usePosts = () => {
 };
 
 export const usePost = ({ postId }) => {
-  return useQuery(["post", postId], () => getPost({ postId }));
+  const queryClient = useQueryClient();
+
+  return useQuery(["post", postId], () => getPost({ postId }), {
+    initialData: () => {
+      const post = queryClient
+        .getQueryData("posts")
+        ?.find((post) => post.id === parseInt(postId));
+
+      if (post) {
+        return {
+          data: post,
+        };
+      } else {
+        return undefined;
+      }
+    },
+  });
 };
 
 export const usePostWithUser = ({ userId }) => {
