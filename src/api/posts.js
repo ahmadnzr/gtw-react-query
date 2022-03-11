@@ -1,8 +1,10 @@
 import axios from "axios";
 import { BASE_URL } from "../utils/constant";
 
-export async function getPosts() {
-  const response = await axios.get(`${BASE_URL}/posts`);
+export async function getPosts({ pageParam = 1 }) {
+  const response = await axios.get(
+    `${BASE_URL}/posts?_limit=10&_page=${pageParam}`
+  );
   return response.data;
 }
 
